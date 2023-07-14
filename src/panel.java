@@ -91,10 +91,10 @@ public class panel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try{
-                    FileInputStream dat = new FileInputStream("estudiantes.dat");
+                    FileReader dat = new FileReader("estudiantes.dat");
                     BufferedReader fil =  new BufferedReader(dat);
                     String linea;
-                    while( (linea = fil.readline()) != null) {
+                    while( (linea = fil.readLine()) != null) {
                         String datostxt[] = linea.split(",");
                         System.out.println(linea);
                         if (datostxt.length == 8) {
